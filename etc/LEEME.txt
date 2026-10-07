@@ -7,7 +7,13 @@ Horas dedicadas:
 Problemas surgidos al realizar la practica:
 
 Respuestas a la preguntas:
-     -Ejercicio 4: Los tipos double almacenan los números en base 2 (binario). Algunos números decimales (base 10) no tienen una representación binaria exacta, lo que genera pequeños errores de precisión al operar.
-     -Ejercicio 5: La clase BigDecimal resuelve este problema realizando operaciones aritméticas de alta precisión, garantizando que el resultado de 2.8 - 1.5 sea exactamente 1.3 al ejecutar el método ejercicio05().
-     
+     -Apartado 3.1.1 - Tipos de datos basicos
+       -Ejercicio 4: Los tipos double almacenan los números en base 2 (binario). Algunos números decimales (base 10) no tienen una representación binaria exacta, lo que genera pequeños errores de precisión al operar.
+       -Ejercicio 5: La clase BigDecimal resuelve este problema realizando operaciones aritméticas de alta precisión, garantizando que el resultado de 2.8 - 1.5 sea exactamente 1.3 al ejecutar el método ejercicio05().
+     -Apartado 3.1.4 - Conversiones de tipo:
+       - Ejercicio 2: Al meter un long (35000) en un byte, como este último es muy pequeño y solo llega hasta el 127, se desborda y sale un número negativo raro (-72) por cómo se recorta la memoria en binario.
+       - Ejercicio 4: Si pones un double demasiado gigante, al pasarlo a float sale "Infinity" porque no cabe. Si es demasiado pequeño, se queda en 0.0 por pérdida de precisión. Y si fuerzas un número que se pasa del límite en un byte, da la vuelta y cambia de signo.
+
+     -Apartado 3.1.5 - Cadenas de caracteres. La clase "String":
+       - Ejercicio 10: El método compareTo compara las letras una a una según la tabla Unicode. Da negativo porque la 'V' mayúscula tiene un valor menor que la 'v' minúscula, así que la primera cadena va antes en el diccionario.
      
