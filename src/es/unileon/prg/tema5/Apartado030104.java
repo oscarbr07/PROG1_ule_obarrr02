@@ -34,7 +34,7 @@ package es.unileon.prg.tema5;
          double varDouble;
          char varChar ;
          boolean varBoolean;
-          
+         
          varByte = 50;
          varShort = 1500 ;
          varInt = 1500000 ;
@@ -69,6 +69,10 @@ package es.unileon.prg.tema5;
       
       // Inicio modificacion
          long varLong = 35000L;
+         int varInt = 0;
+         short varShort = 0;
+         byte varByte = 0;
+
          varInt = (int) varLong;
          varShort = (short) varLong;
          varByte = (byte) varLong;
@@ -89,9 +93,14 @@ package es.unileon.prg.tema5;
     */
        public void ejercicio03() {
          cabecera("03", "");
-      
       // Inicio modificacion
         float varFloat = 123.1f;
+        double varDouble = 0.0;
+        long varLong = 0L;
+        int varInt = 0;
+        short varShort = 0;
+        byte varByte = 0;
+
         varDouble = varFloat; // Implícita
         varLong = (long) varFloat; // Explícita
         varInt = (int) varFloat; // Explícita
@@ -112,27 +121,28 @@ package es.unileon.prg.tema5;
        public void ejercicio04() {
          cabecera("04", "");
       
-         double dGigante = 1.766e289; // Faltaba el =
-         double dNormal = 35.987654321; // Faltaba el =
+         double dGigante = 1.766e289; 
+         double dNormal = 35.987654321; 
          double dMinimo = 0.2E-256;
 
-         float fGigante = (float)dGigante; // Faltaba el = 
-         float fNormal = (float)dNormal; // fNormal en mayúscula para respetar camelCase
-         float fMinimo = (float)dMinimo; // Faltaba el =
+         float fGigante = (float)dGigante; 
+         float fNormal = (float)dNormal; 
+         float fMinimo = (float)dMinimo; 
 
          System.out.println("Gigante: " + fGigante);
          System.out.println("Normal: " + fNormal);
          System.out.println("Minimo: " + fMinimo);
 
-         byte b = (byte)130; // Faltaba el =
-         short s = (short)32770; // Faltaba el =
-         int i = (int) 21474836501L; // 21474836501 supera el máximo de un int, debe llevar L al final antes del casting
+         byte b = (byte)130; 
+         short s = (short)32770; 
+         int i = (int) 21474836501L; 
 
          System.out.println("Byte: " + b);
          System.out.println("Short: " + s);
          System.out.println("Int: " + i);
 
-         float f = 1.3e22f; // Faltaba el = y la f al final del literal
+         float f = 1.3e22f; 
          System.out.println("f: " + f);
       }
    }
+EOF
