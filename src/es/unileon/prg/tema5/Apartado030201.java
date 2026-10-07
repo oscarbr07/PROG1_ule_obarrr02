@@ -7,15 +7,15 @@ package es.unileon.prg.tema5;
  * @author PRG
  * @version 1.0
  */
-    public class Apartado030201 extends Apartado {
+public class Apartado030201 extends Apartado {
    
-       protected String obtenerPractica(){
-         return "P-VAR";
-      }
+   protected String obtenerPractica(){
+      return "P-VAR";
+   }
    
-       protected String obtenerBloque() {
-         return "Cadenas de caracteres - Clase <<String>>";
-      }
+   protected String obtenerBloque() {
+      return "Cadenas de caracteres - Clase <<String>>";
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio1.
@@ -23,38 +23,38 @@ package es.unileon.prg.tema5;
     * </br>
     *
     * Se pide anyadir el codigo necesario para realizar las siguientes tareas:
-    *	Obtener el numero de caracteres de la cadena.
-    *	Calcular la posicion intermedia de la cadena.
-    *	Extraer el caracter que ocupa dicha posicion.
-    *	Mostrar por pantalla dicho caracter y el codigo que lo representa.
+    *   Obtener el numero de caracteres de la cadena.
+    *   Calcular la posicion intermedia de la cadena.
+    *   Extraer el caracter que ocupa dicha posicion.
+    *   Mostrar por pantalla dicho caracter y el codigo que lo representa.
     */
-       public void ejercicio01() {
-         cabecera("01","");
-         String cadena = "En un lugar de la Mancha";
-        // Inicio modificacion
-        int numeroCaracteres = cadena.length();
-        int posicionMedia = numeroCaracteres / 2;
-        char caracterCentral = cadena.charAt(posicionMedia);
-        System.out.println("La cadena tiene " + numeroCaracteres + " caracteres.");
-        System.out.println("El carácter central es: " + caracterCentral);
-        System.out.println("Su código numérico es: " + (int) caracterCentral);
-        // Fin modificacion
-      }
+   public void ejercicio01() {
+      cabecera("01","");
+      String cadena = "En un lugar de la Mancha";
+      // Inicio modificacion
+      int numeroCaracteres = cadena.length();
+      int posicionMedia = numeroCaracteres / 2;
+      char caracterCentral = cadena.charAt(posicionMedia);
+      System.out.println("La cadena tiene " + numeroCaracteres + " caracteres.");
+      System.out.println("El carácter central es: " + caracterCentral);
+      System.out.println("Su código numérico es: " + (int) caracterCentral);
+      // Fin modificacion
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio2.
     *
     * </br>
     *
-    *	Comparar las dos cadenas para ver si son iguales y mostrar por pantalla el resultado de la comparacion.
+    *   Comparar las dos cadenas para ver si son iguales y mostrar por pantalla el resultado de la comparacion.
     * Volver a compararlas pero ahora sin tener en cuenta si estan en mayusculas o minusculas y mostrar por pantalla el resultado de la comparacion.
-    *	Convertir las dos cadenas a minusculas, volver a compararlas y mostrar por pantalla el resultado de la comparacion.
+    *   Convertir las dos cadenas a minusculas, volver a compararlas y mostrar por pantalla el resultado de la comparacion.
     *
     */
-       public void ejercicio02() {
-         cabecera("02", "");
-         String cadena = "Viaje al Parnaso";
-         String otraCadena = "ViAje al pArnaso";
+   public void ejercicio02() {
+      cabecera("02", "");
+      String cadena = "Viaje al Parnaso";
+      String otraCadena = "ViAje al pArnaso";
       // Inicio modificacion
       boolean sonIgualesExactas = cadena.equals(otraCadena);
       System.out.println("¿Son iguales exactamente?: " + sonIgualesExactas);
@@ -65,29 +65,29 @@ package es.unileon.prg.tema5;
       boolean sonIgualesEnMin = cadenaMin.equals(otraCadenaMin);
       System.out.println("¿Son iguales pasándolas a minúsculas?: " + sonIgualesEnMin);
       // Fin modificacion
-      }
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio3.
     *
     * </br>
     * Se pide anyadir el codigo necesario para realizar las siguientes tareas:
-    *	Concatenar las dos cadenas formando una tercera usando el operador +
+    *   Concatenar las dos cadenas formando una tercera usando el operador +
     * Concatenar las dos cadenas formando una tercera usando el metodo concat
     * Mostrar los resultados por pantalla.
     */
-       public void ejercicio03() {
-         cabecera("03", "");
+   public void ejercicio03() {
+      cabecera("03", "");
       
-         String cadena = "Viaje al Parnaso";
-         String otraCadena = "Persiles y Segismunda";
+      String cadena = "Viaje al Parnaso";
+      String otraCadena = "Persiles y Segismunda";
       // Inicio modificacion
       String resultadoSuma = cadena + " - " + otraCadena;
       String resultadoConcat = cadena.concat(" - ").concat(otraCadena);
       System.out.println("Resultado usando '+': " + resultadoSuma);
       System.out.println("Resultado usando 'concat': " + resultadoConcat);
-    // Fin modificacion
-      }
+      // Fin modificacion
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio4.
@@ -99,16 +99,16 @@ package es.unileon.prg.tema5;
     * Comprobar si la cadena empieza con la palabra Viaje utilizando startsWith.
     * Mostrar los resultados por pantalla.
     */
-       public void ejercicio04() {
-         cabecera("04", "");
-         String cadena = "Viaje al Parnaso";
-        // Inicio modificacion
-        boolean termina = cadena.endsWith("Parnaso");
-        boolean empieza = cadena.startsWith("Viaje");
-        System.out.println("¿Termina con 'Parnaso'?: " + termina);
-        System.out.println("¿Empieza con 'Viaje'?: " + empieza);
-        // Fin modificacion
-      }
+   public void ejercicio04() {
+      cabecera("04", "");
+      String cadena = "Viaje al Parnaso";
+      // Inicio modificacion
+      boolean termina = cadena.endsWith("Parnaso");
+      boolean empieza = cadena.startsWith("Viaje");
+      System.out.println("¿Termina con 'Parnaso'?: " + termina);
+      System.out.println("¿Empieza con 'Viaje'?: " + empieza);
+      // Fin modificacion
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio5.
@@ -121,9 +121,9 @@ package es.unileon.prg.tema5;
     * Buscar la ultima ocurrencia de la letra a en la cadena y mostrar el resultado por pantalla.
     * Buscar la letra a empezando por la posicion 3 y mostrar el resultado por pantalla.
     */
-       public void ejercicio05() {
-         cabecera("05","");
-         String cadena = "Viaje al Parnaso";
+   public void ejercicio05() {
+      cabecera("05","");
+      String cadena = "Viaje al Parnaso";
       // Inicio modificacion
       int posP = cadena.indexOf('p');
       System.out.println("Posición de la 'p' minúscula: " + posP);
@@ -133,8 +133,8 @@ package es.unileon.prg.tema5;
       System.out.println("Última ocurrencia de 'a': " + ultimaA);
       int posADesde3 = cadena.indexOf('a', 3);
       System.out.println("Posición de 'a' desde la posición 3: " + posADesde3); 
-        // Fin modificacion  
-      }
+      // Fin modificacion  
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio6.
@@ -142,20 +142,20 @@ package es.unileon.prg.tema5;
     * </br>
     *
     * Se pide anyadir el codigo necesario para realizar las siguientes tareas:
-    *	Reemplazar las ocurrencias de la letra a por * y mostrar el resultado por pantalla.
+    *   Reemplazar las ocurrencias de la letra a por * y mostrar el resultado por pantalla.
     * Reemplazar las ocurrencias de la palabra Parnaso por Olimpo y mostrar en resultado por pantalla
     */
-       public void ejercicio06() {
-         cabecera("06", "");
+   public void ejercicio06() {
+      cabecera("06", "");
       
-         String cadena = "Viaje al Parnaso";
+      String cadena = "Viaje al Parnaso";
       // Inicio modificacion
       String cadenaModificada1 = cadena.replace('a', '*');
       String cadenaModificada2 = cadena.replace("Parnaso", "Olimpo");
       System.out.println("Cadena con 'a' reemplazada por '*': " + cadenaModificada1);
       System.out.println("Cadena con 'Parnaso' reemplazada por 'Olimpo': " + cadenaModificada2);   
       // Fin modificacion
-      }
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio7.
@@ -166,9 +166,9 @@ package es.unileon.prg.tema5;
     * Obtener la subcadena que va desde la mitad al final.
     * Obtener la subcadena que empieza en la primera j y termina antes de la primera s
     */
-       public void ejercicio07() {
-         cabecera("07", "");
-         String cadena = "Viaje al Parnaso";
+   public void ejercicio07() {
+      cabecera("07", "");
+      String cadena = "Viaje al Parnaso";
       // Inicio modificacion
       int mitad = cadena.length() / 2;
       String subcadenaMitad = cadena.substring(mitad);
@@ -177,8 +177,8 @@ package es.unileon.prg.tema5;
       String subcadenaJAS = cadena.substring(indexJ, indexS);
       System.out.println("Subcadena desde la mitad al final: " + subcadenaMitad);
       System.out.println("Subcadena desde la primera 'j' hasta antes de la primera 's': " + subcadenaJAS);
-        // Fin modificacion
-      }
+      // Fin modificacion
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio8.
@@ -187,15 +187,15 @@ package es.unileon.prg.tema5;
     *
     * Se pide anyadir el codigo necesario quitar los espacios sobrantes al principio y al final.
     */
-       public void ejercicio08() {
-         cabecera("08", "");
-         String cadena = " La Galatea   ";
+   public void ejercicio08() {
+      cabecera("08", "");
+      String cadena = " La Galatea   ";
       // Inicio modificacion
       String cadenaLimpia = cadena.trim();
       System.out.println("Cadena original: '" + cadena + "'");
-      System.out.println("Cadena sin espacios sobrantes: '" + cadenaLimpia + "'");     
-        // Fin modificacion
-      }
+      System.out.println("Cadena sin espacios sobrantes: '" + cadenaLimpia + "'");    
+      // Fin modificacion
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio9.
@@ -204,16 +204,14 @@ package es.unileon.prg.tema5;
     *
     * Se pide anyadir el codigo necesario convertir las variables a String utilizando el metodo valueOf. Mostrar el resultado por pantalla.
     */
-       public void ejercicio09() {
-         cabecera("09", "");
-         double numero = 1.12e12;
-         boolean expresion = true;
-         long enteroGrande = 1231231L;
-      // Inicio modificacion
+   public void ejercicio09() {
+      cabecera("09", "");
+      // Nota: eliminadas las declaraciones duplicadas que estaban repetidas aquí
       double numero = 1.12e12;
       boolean expresion = true;
       long enteroGrande = 1231231L;
 
+      // Inicio modificacion
       String numeroStr = String.valueOf(numero);
       String expresionStr = String.valueOf(expresion);  
       String enteroGrandeStr = String.valueOf(enteroGrande);
@@ -221,8 +219,8 @@ package es.unileon.prg.tema5;
       System.out.println("Número convertido a String: " + numeroStr);
       System.out.println("Booleano convertido a String: " + expresionStr); 
       System.out.println("Entero grande convertido a String: " + enteroGrandeStr);
-        // Fin modificacion
-      }
+      // Fin modificacion
+   }
    
    /**
     * Cadenas de caracteres - Clase <<String>> - Ejercicio10.
@@ -231,14 +229,19 @@ package es.unileon.prg.tema5;
     *
     * Se pide compara las dos cadenas lexicograficamente y mostrar el resultado por pantalla.
     */
-       public void ejercicio10() {
-         cabecera("10", "");
-         String cadena = "Viaje al Parnaso";
-         String otraCadena = "Viaje al Olimpo";
+   public void ejercicio10() {
+      cabecera("10", "");
+      String cadena = "Viaje al Parnaso";
+      String otraCadena = "Viaje al Olimpo";
       // Inicio modificacion
       int comparacion = cadena.compareTo(otraCadena);
       if (comparacion < 0) {  
          System.out.println("'" + cadena + "' es lexicográficamente menor que '" + otraCadena + "'"); 
-        // Fin modificacion
+      } else if (comparacion > 0) {
+         System.out.println("'" + cadena + "' es lexicográficamente mayor que '" + otraCadena + "'");
+      } else {
+         System.out.println("Ambas cadenas son lexicográficamente iguales");
       }
+      // Fin modificacion
    }
+}
