@@ -32,6 +32,12 @@ package es.unileon.prg.tema5;
          cabecera("01","");
          String cadena = "En un lugar de la Mancha";
         // Inicio modificacion
+        int numeroCaracteres = cadena.length();
+        int posicionMedia = numeroCaracteres / 2;
+        char caracterCentral = cadena.charAt(posicionMedia);
+        System.out.println("La cadena tiene " + numeroCaracteres + " caracteres.");
+        System.out.println("El carácter central es: " + caracterCentral);
+        System.out.println("Su código numérico es: " + (int) caracterCentral);
         // Fin modificacion
       }
    
@@ -50,6 +56,14 @@ package es.unileon.prg.tema5;
          String cadena = "Viaje al Parnaso";
          String otraCadena = "ViAje al pArnaso";
       // Inicio modificacion
+      boolean sonIgualesExactas = cadena.equals(otraCadena);
+      System.out.println("¿Son iguales exactamente?: " + sonIgualesExactas);
+      boolean sonIgualesIgnorando = cadena.equalsIgnoreCase(otraCadena);
+      System.out.println("¿Son iguales ignorando mayúsculas/minúsculas?: " + sonIgualesIgnorando);
+      String cadenaMin = cadena.toLowerCase();
+      String otraCadenaMin = otraCadena.toLowerCase();
+      boolean sonIgualesEnMin = cadenaMin.equals(otraCadenaMin);
+      System.out.println("¿Son iguales pasándolas a minúsculas?: " + sonIgualesEnMin);
       // Fin modificacion
       }
    
@@ -68,7 +82,11 @@ package es.unileon.prg.tema5;
          String cadena = "Viaje al Parnaso";
          String otraCadena = "Persiles y Segismunda";
       // Inicio modificacion
-        // Fin modificacion
+      String resultadoSuma = cadena + " - " + otraCadena;
+      String resultadoConcat = cadena.concat(" - ").concat(otraCadena);
+      System.out.println("Resultado usando '+': " + resultadoSuma);
+      System.out.println("Resultado usando 'concat': " + resultadoConcat);
+    // Fin modificacion
       }
    
    /**
@@ -85,6 +103,10 @@ package es.unileon.prg.tema5;
          cabecera("04", "");
          String cadena = "Viaje al Parnaso";
         // Inicio modificacion
+        boolean termina = cadena.endsWith("Parnaso");
+        boolean empieza = cadena.startsWith("Viaje");
+        System.out.println("¿Termina con 'Parnaso'?: " + termina);
+        System.out.println("¿Empieza con 'Viaje'?: " + empieza);
         // Fin modificacion
       }
    
@@ -103,6 +125,14 @@ package es.unileon.prg.tema5;
          cabecera("05","");
          String cadena = "Viaje al Parnaso";
       // Inicio modificacion
+      int posP = cadena.indexOf('p');
+      System.out.println("Posición de la 'p' minúscula: " + posP);
+      int posPar = cadena.indexOf("Par");
+      System.out.println("Posición de 'Par': " + posPar);
+      int ultimaA = cadena.lastIndexOf('a');
+      System.out.println("Última ocurrencia de 'a': " + ultimaA);
+      int posADesde3 = cadena.indexOf('a', 3);
+      System.out.println("Posición de 'a' desde la posición 3: " + posADesde3); 
         // Fin modificacion  
       }
    
@@ -120,6 +150,10 @@ package es.unileon.prg.tema5;
       
          String cadena = "Viaje al Parnaso";
       // Inicio modificacion
+      String cadenaModificada1 = cadena.replace('a', '*');
+      String cadenaModificada2 = cadena.replace("Parnaso", "Olimpo");
+      System.out.println("Cadena con 'a' reemplazada por '*': " + cadenaModificada1);
+      System.out.println("Cadena con 'Parnaso' reemplazada por 'Olimpo': " + cadenaModificada2);   
       // Fin modificacion
       }
    
@@ -136,6 +170,13 @@ package es.unileon.prg.tema5;
          cabecera("07", "");
          String cadena = "Viaje al Parnaso";
       // Inicio modificacion
+      int mitad = cadena.length() / 2;
+      String subcadenaMitad = cadena.substring(mitad);
+      int indexJ = cadena.indexOf('j');
+      int indexS = cadena.indexOf('s');
+      String subcadenaJAS = cadena.substring(indexJ, indexS);
+      System.out.println("Subcadena desde la mitad al final: " + subcadenaMitad);
+      System.out.println("Subcadena desde la primera 'j' hasta antes de la primera 's': " + subcadenaJAS);
         // Fin modificacion
       }
    
@@ -150,6 +191,9 @@ package es.unileon.prg.tema5;
          cabecera("08", "");
          String cadena = " La Galatea   ";
       // Inicio modificacion
+      String cadenaLimpia = cadena.trim();
+      System.out.println("Cadena original: '" + cadena + "'");
+      System.out.println("Cadena sin espacios sobrantes: '" + cadenaLimpia + "'");     
         // Fin modificacion
       }
    
@@ -166,6 +210,17 @@ package es.unileon.prg.tema5;
          boolean expresion = true;
          long enteroGrande = 1231231L;
       // Inicio modificacion
+      double numero = 1.12e12;
+      boolean expresion = true;
+      long enteroGrande = 1231231L;
+
+      String numeroStr = String.valueOf(numero);
+      String expresionStr = String.valueOf(expresion);  
+      String enteroGrandeStr = String.valueOf(enteroGrande);
+
+      System.out.println("Número convertido a String: " + numeroStr);
+      System.out.println("Booleano convertido a String: " + expresionStr); 
+      System.out.println("Entero grande convertido a String: " + enteroGrandeStr);
         // Fin modificacion
       }
    
@@ -181,6 +236,9 @@ package es.unileon.prg.tema5;
          String cadena = "Viaje al Parnaso";
          String otraCadena = "Viaje al Olimpo";
       // Inicio modificacion
+      int comparacion = cadena.compareTo(otraCadena);
+      if (comparacion < 0) {  
+         System.out.println("'" + cadena + "' es lexicográficamente menor que '" + otraCadena + "'"); 
         // Fin modificacion
       }
    }

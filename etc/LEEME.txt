@@ -1,9 +1,13 @@
 Practica P-VAR
 
-Alumno:
+Alumno: Oscar Barrallo Risalde
 
 Horas dedicadas:
 
 Problemas surgidos al realizar la practica:
 
 Respuestas a la preguntas:
+     -Ejercicio 4: Los tipos double almacenan los números en base 2 (binario). Algunos números decimales (base 10) no tienen una representación binaria exacta, lo que genera pequeños errores de precisión al operar.
+     -Ejercicio 5: La clase BigDecimal resuelve este problema realizando operaciones aritméticas de alta precisión, garantizando que el resultado de 2.8 - 1.5 sea exactamente 1.3 al ejecutar el método ejercicio05().
+     
+     
