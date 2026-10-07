@@ -27,14 +27,18 @@ public class Apartado030102 extends Apartado {
 		cabecera("01","Utilizacion de operadores aritmeticos");
 
 		// Inicio modificacion
-		final int CONST=128;
-		int op1;
-		int op2;
-		int resultado;
+		final int CONST = 128; 
+              int op1 = 5;
+              int op2; 
+              int resultado;
 		//Preincrementa op1 y multiplicalo por 12
+		op1 = ++op1 * 12;
 		//El valor de op2 es la suma op1 predecrementado con CONST
+		op2 = --op1 + CONST;
 		//Halla el resto de dividir op2 entre op1 y guardalo en resultado
+		resultado = op2 % op1;
 		//Muestra por pantalla los valores de op1, op2 y resultado
+		System.out.println("op1: " + op1 + ", op2: " + op2 + ", resultado: " + resultado);
       // Fin modificacion
 	}
 
@@ -49,14 +53,14 @@ public class Apartado030102 extends Apartado {
 		cabecera("02", "Utilizacion de operadores logicos");
 
 		// Inicio modificacion
-		int edad;
-		int numeroPartes;
-		boolean deportivo;
-		boolean rebaja;
-		// rebaja = expresion booleana
-        /* DESCOMENTAR
-		System.out.println("Rebaja = " + rebaja);
-		*/
+		int edad = 45;
+        int numeroPartes = 2;
+        boolean deportivo = false;
+		// La rebaja se da si se cumple la condición A (entre 40 y 60 años Y menos de 3 partes)
+        // O (||) la condición B (mayor de 20 Y máximo un parte Y no es deportivo)
+		boolean rebaja = (edad >= 40 && edad <= 60 && numeroPartes < 3) || 
+                 (edad > 20 && numeroPartes <= 1 && !deportivo);
+		System.out.println("Rebaja= " + rebaja);
 		// Fin modificacion
 	}
 
@@ -72,11 +76,19 @@ public class Apartado030102 extends Apartado {
 
 		// Inicio modificacion
 		int segundos, horas, minutos;
-		int totalSegundos=56000;
+        int totalSegundos = 56000;
 		// Realizacion de calculos
-         /* DESCOMENTAR
-		System.out.println(horas+"h "+minutos+"m "+segundos+"s ");
-		*/
+		// Una hora tiene 3600 segundos
+        horas = totalSegundos / 3600;
+
+         // Obtenemos los segundos que sobran tras quitar las horas, y los dividimos entre 60
+        minutos = (totalSegundos % 3600) / 60;
+
+        // Los segundos finales son el resto de dividir entre 60
+        segundos = totalSegundos % 60;
+
+        System.out.println(horas + "h " + minutos + "m " + segundos + "s ");
+        
 		// Fin modificacion
 	}
-}
+} 
