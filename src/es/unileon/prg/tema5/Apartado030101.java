@@ -31,19 +31,40 @@ public class Apartado030101 extends Apartado {
 		cabecera("01", "Correccion de errores de compilacion");
 
 		// Inicio modificacion
-		Int entero = 6;
-		long otroEntero = 1.000;
-		long decimal = 7.0;
-		double otroDecimal = 7,0;
-		byte enteroDe8Bits = 10000;
-		char caracter = a;
-		char otroCaracter = "a";
-		boolean booleano = "true";
-		short enteroDe16Bits = 50000;
 
-		byte static = 5;
-		byte int = 3;
-		double _otra-Variable = 2.0;
+// Int no existe, es int en minúscula.
+int entero = 6; 
+
+// Un número con puntos de millar da error. Los long llevan una 'L' al final.
+long otroEntero = 1000L; 
+
+// 7.0 es un decimal, no cabe en un long (que es solo para enteros). Lo cambio a double.
+double decimal = 7.0; 
+
+// Los decimales usan punto, no coma.
+double otroDecimal = 7.0; 
+
+// Un byte solo admite valores hasta 127. 10000 necesita al menos un short.
+short enteroDe8Bits = 10000; 
+
+// Los caracteres (char) deben ir entre comillas simples.
+char caracter = 'a'; 
+
+// Las comillas dobles, es una cadena (String).
+String otrocaracter = "a"; 
+
+// true es una palabra reservada, no lleva comillas.
+boolean booleano = true; 
+
+// Un short solo admite hasta 32767. 50000 necesita un int.
+int enteroDe16Bits = 50000; 
+
+// "static" e "int" son palabras reservadas del sistema, no pueden ser nombres de variables.
+byte variableEstatica = 5; 
+byte variableEntera = 3; 
+
+// Los nombres de variables no pueden llevar guiones medios (-). Usamos camelCase.
+double otraVariable = 2.0;
 		// Fin modificacion
 	}
 
@@ -59,16 +80,35 @@ public class Apartado030101 extends Apartado {
 		cabecera("02", "Definicion de tipo de datos");
 
 		// Inicio modificacion
-		variable1 = 637;
-		variable2 = 637L;
-		variable3 = 6.37;
-		variable4 = 6.37f;
-		variable5 = 6.37d;
-		variable6 = '6';
-		variable7 = "6.37";
-		variable8 = 'a';
-		variable9 = "a";
-		variable10 = true;
+	// 637 es un número entero estándar.
+int variable1 = 637;
+
+// La 'L' indica explícitamente que es un long (entero largo).
+long variable2 = 637L;
+
+// Un número con decimales por defecto es double.
+double variable3 = 6.37;
+
+// La 'f' indica que es un float.
+float variable4 = 6.37f;
+
+// La 'd' indica double.
+double variable5 = 6.37d;
+
+// Las comillas simples indican un único carácter.
+char variable6 = '6';
+
+// Las comillas dobles indican una cadena de texto.
+String variable7 = "6.37";
+
+// Comilla simple = carácter.
+char variable8 = 'a';
+
+// Comilla doble = texto.
+String variable9 = "a";
+
+// Valor lógico.
+boolean variable10 = true;
 		// Fin modificacion
 	}
 
@@ -86,16 +126,25 @@ public class Apartado030101 extends Apartado {
 		// Inicio modificacion
 
 		//Numero de asignaturas de un curso
+		int numeroAsignaturas = 5;
 		//Nota media de la asignatura
+		double notaMedia = 7.5;
 		//Edad de una persona
+		int edadPersona = 30;
 		//Salario mensual de un empleado
+		double salarioMensual = 2500.0;
 		//Nombre de una asignatura
+		String nombreAsignatura = "Matemáticas";
 		//Constante PI
-		//Constante VERDADERO
+		final double PI = 3.14159;
+		//Constante VERDADERO´
+		boolean constanteVerdadero = true;
 		//Portal de la direccion de una vivienda
+        int portal = 4;
 		//Piso de la direccion de una vivienda
+		int piso = 3;
 		//Puerta la direccion de una vivienda
-
+		char puerta = 'A';
 		// Fin modificacion
 	}
 
@@ -148,3 +197,4 @@ public class Apartado030101 extends Apartado {
 		// Fin modificacion
 	}
 }
+
