@@ -44,16 +44,15 @@ package es.unileon.prg.tema5;
          varChar = 'H' ;
          varBoolean = true ;
       
-         varInt    = varShort;
-         varDouble = varFloat;  
-         varFloat  = varLong;
+         varInt    = varShort; 
+         varDouble = varFloat;
+         varFloat  = varLong; 
          varLong   = varInt;
          varLong   = 9223372036854775807L;
          varFloat  = varLong;
-         /* DESCOMENTAR
-         varByte   = varShort;
-         varShort  = varInt;
-         */
+        // INCORRECTAS  Hay que comentarlas para que compile:
+        // varByte = varShort; // Error: un short (16 bits) no cabe directamente en un byte (8 bits)
+        // varShort = varInt; // Error: un int (32 bits) no cabe directamente en un short (16 bits)  
       
       }
    
@@ -69,12 +68,14 @@ package es.unileon.prg.tema5;
          cabecera("02", "");
       
       // Inicio modificacion
-         byte varByte;
-         short varShort;
-         int varInt;
-         long varLong;
-      
-         varLong=35000L;
+         long varLong = 35000L;
+         varInt = (int) varLong;
+         varShort = (short) varLong;
+         varByte = (byte) varLong;
+
+         System.out.println("int: " + varInt);
+         System.out.println("short: " + varShort);
+         System.out.println("byte: " + varByte);
       // Fin modificacion
       }
    
@@ -90,13 +91,15 @@ package es.unileon.prg.tema5;
          cabecera("03", "");
       
       // Inicio modificacion
-         byte varByte;
-         short varShort;
-         int varInt;
-         long varLong;
-         float varFloat;
-         double varDouble;
-         varFloat= 123.1f;
+        float varFloat = 123.1f;
+        varDouble = varFloat; // Implícita
+        varLong = (long) varFloat; // Explícita
+        varInt = (int) varFloat; // Explícita
+        varShort = (short) varFloat; // Explícita
+        varByte = (byte) varFloat; // Explícita
+
+        System.out.println("De float a double: " + varDouble);
+        System.out.println("De float a int (pierde el .1): " + varInt);
         // Fin modificacion
       }
    
@@ -109,32 +112,27 @@ package es.unileon.prg.tema5;
        public void ejercicio04() {
          cabecera("04", "");
       
-         double dGigante, dNormal, dMinimo;
-         float  fGigante, fNormal, fMinimo;
-      
-         dGigante = 1.766e289;
-         dNormal  = 35.987654321;
-         dMinimo  = 0.2E-256;
-      
-         fGigante = (float)dGigante;
-         fNormal  = (float)dNormal;
-         fMinimo  = (float)dMinimo;
-      
-         System.out.println("Gigante: " + fGigante);    
-         System.out.println("Normal : " + fNormal);    
-         System.out.println("Minimo : " + fMinimo);
-      
-         byte b = (byte)130;
-         short s = (short)32770;
-         int i = (int)2147483650l; 
-      
-         System.out.println("Byte  : " + b);    
-         System.out.println("Short : " + s);    
-         System.out.println("Int   : " + i);
-      
-         /* DESCOMENTAR
-         float f = 1.3e22;   
-         System.out.println("f: " + f); 
-         */ 
+         double dGigante = 1.766e289; // Faltaba el =
+         double dNormal = 35.987654321; // Faltaba el =
+         double dMinimo = 0.2E-256;
+
+         float fGigante = (float)dGigante; // Faltaba el = 
+         float fNormal = (float)dNormal; // fNormal en mayúscula para respetar camelCase
+         float fMinimo = (float)dMinimo; // Faltaba el =
+
+         System.out.println("Gigante: " + fGigante);
+         System.out.println("Normal: " + fNormal);
+         System.out.println("Minimo: " + fMinimo);
+
+         byte b = (byte)130; // Faltaba el =
+         short s = (short)32770; // Faltaba el =
+         int i = (int) 21474836501L; // 21474836501 supera el máximo de un int, debe llevar L al final antes del casting
+
+         System.out.println("Byte: " + b);
+         System.out.println("Short: " + s);
+         System.out.println("Int: " + i);
+
+         float f = 1.3e22f; // Faltaba el = y la f al final del literal
+         System.out.println("f: " + f);
       }
    }
